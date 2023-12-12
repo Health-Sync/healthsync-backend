@@ -1,9 +1,10 @@
 package AI.Powered.Virtual.Medical.Doctor.repository;
 
-import AI.Powered.Virtual.Medical.Doctor.entity.User;
+import AI.Powered.Virtual.Medical.Doctor.entries.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, Long> {
-    User findByEmail(String email);
-    Boolean existsByEmail(String email);
+import java.util.Optional;
+
+public interface UserRepository extends JpaRepository<User, Integer> {
+    Optional<User> findByEmail(String email);
 }

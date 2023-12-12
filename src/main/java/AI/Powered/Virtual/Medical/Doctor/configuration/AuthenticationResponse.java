@@ -1,5 +1,4 @@
-package AI.Powered.Virtual.Medical.Doctor.dto;
-
+package AI.Powered.Virtual.Medical.Doctor.configuration;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class LoginDTO {
-    private String email;
-    private String password;
+public class AuthenticationResponse {
+    private String token;
+
 }
